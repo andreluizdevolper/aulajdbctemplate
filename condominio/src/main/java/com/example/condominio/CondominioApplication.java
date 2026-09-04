@@ -20,9 +20,7 @@ public class CondominioApplication implements CommandLineRunner {
   public void run(String... args) throws Exception {
 
     jdbcTemplate.execute("CREATE TABLE proprietario (id_proprietario SERIAL, nome VARCHAR(45), telefone VARCHAR(45))");
-    jdbcTemplate.execute("CREATE TABLE condominio (id_apartamento SERIAL, qtde_quartos INT, nro_porta INT, tipo VARCHAR(45), proprietario_id_proprietario INT)");
+    jdbcTemplate.execute("CREATE TABLE apartamento (id_apartamento SERIAL, qtde_quartos INT, nro_porta INT, tipo VARCHAR(45), proprietario_id_proprietario INT)");
 
    
   }
-
-}
